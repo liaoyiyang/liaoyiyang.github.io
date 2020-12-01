@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<link href="style/reset.css" rel="stylesheet" type="text/css">
+	<link href="style/main.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="./style/computer.css">
+	<link rel="stylesheet" href="./style/teaching.css">
+</head>
+
+<body>
+	<div id="container">
+		<div>
+			<div id="header">
+				<div class="headerone">
+					<div id="nameLogo"></div>
+
+				</div>
+				<div class="headertwo">
+					<ul class="nav1">
+						<li><a href="./home.html">HOME</a></li>
+						<li><a href="">NEWS&EVENTS</a></li>
+						<li><a href="">ACADEMICS</a></li>
+						<li><a href="">LIBRARY</a></li>
+						<li><a href="">HOSPITAL</a></li>
+					</ul>
+				</div>
+			</div>
+			<div id="content">
+				<ul class="left">
+					<li><a href="./computer.html">Computer science program</a></li>
+					<li><a href="./teaching.html">Teaching Assistant Application</a></li>
+					<li><a href="./calculation.html">GPA calculation</a></li>
+					<li><a href="">Covid-19 Help</a></li>
+				</ul>
+				<div class="hot">
+					<!--  -->
+					<!-- <div> -->
+						<div class="topmain">
+							<div class="top">
+								Application
+							</div>
+							<form>
+								<div class="name">
+									<div class="name1">
+										<input type="text" class="form-control" id="firstname" placeholder="firstname">
+									</div>
+									<div class="name2">
+										<input type="text" class="form-control" id="lastname" placeholder="lastname">
+									</div>
+								</div>
+								<div class="">
+									<input type="email" class="form-control" id="userEmail" placeholder="ID">
+								</div>
+								<div class="">
+									<input type="text" class="form-control" id="comments" placeholder="comments">
+								</div>
+								<div class="phone">
+									<!--  -->
+									<input class="form-control" type="text" placeholder="GPA" id="pho2">
+								</div>
+								<div class=" birth">
+									<input class="form-control" type="text" placeholder="date" readonly>
+									<input type="text" class="form-control" id="Year" readonly>
+									<input type="text" class="form-control" id="Month" readonly>
+									<input type="text" class="form-control" id="Day" readonly>
+								</div>
+								<div class="gender">
+									<select class="form-control" placeholder="xb" id="gender">
+										<option disabled selected hidden value="0">gender</option>
+										<option value="1">man</option>
+										<option value="2">woman</option>
+									</select>
+								</div>
+								<div class="reg">
+									<button type="submit" class="btn btn-default btn1">submit</button>
+								</div>
+							</form>
+						</div>
+						<!-- <img src="./img/p5.png" alt="" width="300px" height="150px"> -->
+						<!--  -->
+					<!--  -->
+				</div>
+			</div>
+
+			<div id="footer">
+				<div>Prepared by: liaoyiyang Date: Dec 1 2020</div>
+			</div>
+		</div>
+	</div>
+
+	</div>
+	</div>
+	<script>
+		(function a() {
+			var date = new Date()
+			var year = date.getFullYear()
+			var day = date.getDate()
+			var month = date.getMonth()
+			document.getElementById('Year').setAttribute('placeholder', year)
+			document.getElementById('Month').setAttribute('placeholder', month + 1)
+			document.getElementById('Day').setAttribute('placeholder', day)
+		})()
+	</script>
+</body>
+
+</html>

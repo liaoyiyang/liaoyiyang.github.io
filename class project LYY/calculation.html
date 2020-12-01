@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <link href="style/reset.css" rel="stylesheet" type="text/css">
+    <link href="style/main.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./style/computer.css">
+    <link rel="stylesheet" href="./style/calculation.css">
+</head>
+
+<body>
+    <div id="container">
+        <div>
+            <div id="header">
+                <div class="headerone">
+                    <div id="nameLogo"></div>
+
+                </div>
+                <div class="headertwo">
+                    <ul class="nav1">
+                        <li><a href="./home.html">HOME</a></li>
+                        <li><a href="">NEWS&EVENTS</a></li>
+                        <li><a href="">ACADEMICS</a></li>
+                        <li><a href="">LIBRARY</a></li>
+                        <li><a href="">HOSPITAL</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="content">
+                <ul class="left">
+                    <li><a href="./computer.html">Computer science program</a></li>
+                    <li><a href="./teaching.html">Teaching Assistant Application</a></li>
+                    <li><a href="./calculation.html">GPA calculation</a></li>
+                    <li><a href="">Covid-19 Help</a></li>
+                </ul>
+                <div class="hot">
+                    <!--  -->
+                    <div class="div0">Use a Test Score array</div>
+                    <div class="div1">
+                        Course Name:&nbsp;<input type="text">
+                    </div>
+                    <div class="div2">
+                        Score:&nbsp;<input type="text" id="score1">
+                    </div>
+                    <div class="div1">
+                        Course Name:&nbsp;<input type="text">
+                    </div>
+                    <div class="div2">
+                        Score:&nbsp;<input type="text" id="score2">
+                    </div>
+                    <div class="div3">
+                        <button id="btn">Test</button>
+                        <div class="gpa">GPA:&nbsp;<span id="gpaget">null</span></div>
+                    </div>
+                    <!--  -->
+                </div>
+            </div>
+
+            <div id="footer">
+                <div>Prepared by: liaoyiyang Date: Dec 1 2020</div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    </div>
+    <script>
+        (function calcu() {
+            document.getElementById('btn').onclick = function () {
+                console.log('...');
+                let num1 = document.getElementById('score1').value-0
+                let num2 = document.getElementById('score2').value-0
+                let num3 = (num1 + num2) / 2
+                let gpa = 'null'
+                console.log(num1);
+                console.log(num2);
+                console.log(num3);
+                if ((3.5 <= num3) &&(num3<= 4)) {
+                    gpa = 'A'
+                } else if ((2.5 <= num3) &&(num3<3.5)) {
+                    gpa = 'B'
+                } else if ((1.5 <= num3) &&(num3<=2.5)) {
+                    gpa = 'C'
+                } else if ((1<= num3) &&(num3<=1.5)) {
+                    gpa = 'D'
+                } else if (num3 < 1) {
+                    gpa = 'E'
+                }else{
+                   gpa = 'null'
+                }
+                document.getElementById('gpaget').innerText=gpa
+            }
+        })()
+    </script>
+</body>
+
+</html>
